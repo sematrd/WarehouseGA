@@ -21,7 +21,7 @@ namespace WarehouseGA
             var mutation = new UniformMutation(); //başlangıç olarak atanmıştır, değiştirilebilir.
             var fitness = new GaFitness();
             var chromosome = new GaChromosome();
-            //deneme 2 deneme 2
+            //deneme 2 
 
 
         }
