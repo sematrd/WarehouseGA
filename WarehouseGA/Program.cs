@@ -32,7 +32,7 @@ namespace WarehouseGA
 
             var bestChromosome = ga.BestChromosome as GaChromosome;
             Console.WriteLine("Best solution found is X:{0}, Y:{1} with {2} fitness.", bestChromosome.X, bestChromosome.Y, bestChromosome.Fitness);
-		    Console.ReadKey();
+		    Console.ReadKey(); //
             
         }
     }
