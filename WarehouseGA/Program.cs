@@ -22,7 +22,7 @@ namespace WarehouseGA
             var fitness = new GaFitness();
             var chromosome = new GaChromosome();
             var population=new Population(134,139,chromosome);
-
+            
             var ga=new GeneticAlgorithm(population,fitness,selection,crossover,mutation);
             ga.Termination=new GenerationNumberTermination(); //algoritmanın kaçıngı generation da durdurulacağını belirler.
 
