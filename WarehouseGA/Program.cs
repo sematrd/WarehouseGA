@@ -21,8 +21,18 @@ namespace WarehouseGA
             var mutation = new UniformMutation(); //başlangıç olarak atanmıştır, değiştirilebilir.
             var fitness = new GaFitness();
             var chromosome = new GaChromosome();
-            //deneme 2 aafgh
+            var population=new Population(134,139,chromosome);
 
+            var ga=new GeneticAlgorithm(population,fitness,selection,crossover,mutation);
+            ga.Termination=new GenerationNumberTermination(); //algoritmanın kaçıngı generation da durdurulacağını belirler.
+
+             Console.WriteLine("GA running...");
+            ga.Start();
+            Console.WriteLine("GA done in {0} generations.", ga.GenerationsNumber);
+
+            var bestChromosome = ga.BestChromosome as GaChromosome;
+            Console.WriteLine("Best solution found is X:{0}, Y:{1} with {2} fitness.", bestChromosome.X, bestChromosome.Y, bestChromosome.Fitness);
+		    Console.ReadKey();
             
         }
     }
